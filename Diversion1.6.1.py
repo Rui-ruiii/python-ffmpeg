@@ -1,3 +1,12 @@
+#in this version
+#the program can ：
+                  #from video stream extract the video&audio
+                  #generate the details of video into a text
+                  #output the situation of whether the file is generated or not
+#the program will be better to：
+                  #output the reason of fail to generate V or A file
+                  
+ 
 import os
 import subprocess
 import re

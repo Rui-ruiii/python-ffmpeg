@@ -83,11 +83,13 @@ for i in dirs:
 if "." + video_add in new_suffixs:
     print("video file of %s has successfully generated ! ~ " % (videoinfo_str4 + '.' + video_add))
 else:
-    print("%s video format file has failed to generated ! "% video_add)
+    print("%s video format file has failed to generated,cause unable to find a suitable format for it ! "% video_add)
 if "." + audio_add in new_suffixs:
     print("audio file of %s has successfully generated ! ~"% (audioinfo_str4 + '.' + audio_add))
 else:
-    print("%s audio format file has failed to generated ! "% audio_add)
+    print("%s audio format file has failed to generated,cause unable to find a suitable format for it! "% audio_add)
+if "." + video_add and "." + audio_add not in new_suffixs:
+    print("%s video format can not be decode")
 
 
 

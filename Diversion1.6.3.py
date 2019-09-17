@@ -1,3 +1,11 @@
+#这次对ffmpeg分流过程中的log作出处理，不再让它在cmd或者consolerun里显示了，而是分成audio和video两部分log
+#这次修改把分流的名称也做了修改，不再以信息为名，因为有对应的log，信息可以从log获取
+#下一个版本需要解决的是1.减少冗余代码
+#                   2.修改获取源流的方式为绝对路径
+#                   3.把生成的多个文件放入一个文件夹
+
+
+
 import os
 import subprocess
 import re

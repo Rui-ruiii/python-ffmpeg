@@ -1,3 +1,7 @@
+#这个版本基本实现了ffmpeg.exe,streams,.py文件，生成结果，这几部分在本地不同目录下时成功取得结果的预期功能
+#但未在单位的电脑上实现公共网络下的fileserver中，实践上述功能
+
+
 import os
 import re
 import shutil

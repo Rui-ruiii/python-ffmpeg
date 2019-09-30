@@ -1,12 +1,6 @@
-#cd to the path of \scripts in Python,then input "cxfreeze path+TestDiversion.py --target-dir out/"
-#then you get an exe file,open and execute it
-#in next stage，i need to add the founction of automatic batch processing
-
-
 import os
 import re
 import shutil
-import time
 
 
 #获取ffmpeg.exe的路径
@@ -65,14 +59,13 @@ os.remove(path_to_ffmpeg + "\\" + "formats_list.txt")
 os.chdir(Current)
 
 for suffix_name in list_of_streamsuffixs:
+    print(suffix_name)
     if not os.path.exists(path_to_result + "\\" + suffix_name):
         os.mkdir(path_to_result + "\\" + suffix_name)
         #把streams文件夹中后缀名相同的文件放入同后缀名的文件夹
         for i in dirs:
             Raw_name = os.path.splitext(i)[0]
-            ignore_uperlower_filename = os.path.splitext(i)[1].lower()
-            ignore_uperlower_suffix_name = suffix_name.lower()
-            if ignore_uperlower_filename == ignore_uperlower_suffix_name:
+            if os.path.splitext(i)[1] == suffix_name:
                 #以流名创建文件夹
                 os.mkdir(path_to_result + "\\" + suffix_name + "\\" + os.path.splitext(i)[0])
                 #把源流放到以源流名命名的文件夹
@@ -223,4 +216,3 @@ os.rename(path_to_streams,path_to_stream)
 print("**********Finish**********")
 print("Every Folder should have 6 file(3 Audio/Video && 3 text)")
 print("If the number of files is incorrect, please check ErrorLog.txt,thank you.")
-time.sleep(10)

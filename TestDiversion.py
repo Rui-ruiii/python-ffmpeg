@@ -1,3 +1,8 @@
+#cd to the path of \scripts in Python,then input "cxfreeze path+TestDiversion.py --target-dir out/"
+#then you get an exe file,open and execute it
+#in next stage，i need to add the founction of automatic batch processing
+
+
 import os
 import re
 import shutil
